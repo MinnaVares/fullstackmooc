@@ -1,0 +1,14 @@
+note over selain
+Selaimelle ladattu js-koodi lähettää 
+uuden muistiinpanon lomakkeelta
+palvelimelle.
+end note
+
+selain->palvelin: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+
+note over palvelin
+Palvelin palauttaa statuskoodin 201 Created
+end note
+
+
+palvelin-->selain: Status code 201

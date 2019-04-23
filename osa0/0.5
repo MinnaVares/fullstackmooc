@@ -1,0 +1,31 @@
+
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa
+
+note over palvelin
+Palvelin palauttaa HTML-sivun selaimelle
+end note
+
+palvelin-->selain: Status code 200 & HTML-sivu
+
+note over selain
+HTML-sivun <head>-osiossa kutsutaan ensin css-tiedostoa
+end note
+
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+palvelin-->selain: Status code 200 & main.css -stylesheet
+
+note over selain
+ja sitten js-tiedostoa
+end note
+
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa.js
+palvelin-->selain: Status code 200 & spa.js
+
+note over selain
+spa.js -tiedostossa javascriptin avulla 
+haetaan data.json, eli muistiinpanojen sisältö
+end note
+
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+palvelin-->selain: Status code 200 & data.json
+
